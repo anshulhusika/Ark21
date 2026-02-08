@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove all default Vite demo styles */
+
+/* Global body reset */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+/* Background for login page */
+.login-bg {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass card effect */
+.glass {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(10px);
+}
+
+/* Reusable components */
+.input {
+  @apply border p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.btn-primary {
+  @apply bg-blue-700 text-white px-4 py-3 rounded hover:bg-blue-800 font-semibold;
+}
+
+/* Container utility */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+/* Simple two column login layout */
+
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.login-left {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.login-right {
+  flex: 1;
+  min-width: 320px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-image {
+  max-width: 90%;
+  height: auto;
+}
+
+.input {
+  @apply border p-3 w-full rounded focus:outline-none focus:ring-2 focus:ring-blue-400;
+}
+
+.btn-primary {
+  @apply bg-blue-700 text-white px-4 py-3 rounded hover:bg-blue-800 font-semibold;
+}
+
+.Navbar{
+
+ background: #3B82F6;
+background: linear-gradient(90deg, rgba(59, 130, 246, 1) 0%, rgba(87, 199, 199, 1) 86%);
+}
