@@ -24,7 +24,7 @@ useEffect(() => {
     try {
       const res = await api.get("/products");
       console.log('products',res.data)
-      setProducts(res.data);
+      setProducts(res.data || []);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -60,10 +60,11 @@ useEffect(() => {
 //     { id: 5, name: "LED Bulbs", price: "₹120", category: "Home Appliances" },
 //     { id: 6, name: "Office Chairs", price: "₹4500", category: "Furniture" },
 //   ];
-
- const filteredProducts = products.filter((p) =>
-  p.name.toLowerCase().includes(search.toLowerCase())
-);
+const filteredProducts = Array.isArray(products)
+  ? products.filter((p) =>
+      p.name?.toLowerCase().includes(search.toLowerCase())
+    )
+  : [];
 
 
   return (
