@@ -184,7 +184,7 @@ useEffect(() => {
     >
       {item.image && (
         <img
-          src={`http://localhost:5000/uploads/${item.image}`}
+          src={`${api}/uploads/${item.image}`}
           className="w-full h-40 object-cover rounded mb-3"
         />
       )}
