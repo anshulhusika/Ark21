@@ -199,7 +199,7 @@ const ProductDetail = () => {
               >
                 {item.image && (
                   <img
-                    src={`http://localhost:5000/uploads/${item.image}`}
+                    src={`${api}/uploads/${item.image}`}
                     className="w-full h-36 object-cover rounded-lg mb-2"
                   />
                 )}
